@@ -1,0 +1,109 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.app-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.1;
+}
+
+/* --- Add Task Form --- */
+.add-task-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.add-task-form input {
+  flex-grow: 1;
+  padding: 0.8em 1em;
+  font-size: 1em;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background-color: #1a1a1a;
+}
+
+.add-task-form button {
+  padding: 0.8em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background-color: #535bf2;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.add-task-form button:hover {
+  border-color: #646cff;
+}
+
+/* --- Task List --- */
+.task-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+.task-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8em 1em;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.task-description {
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+.task-list li.completed .task-description {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #ff6b6b;
+  font-size: 1.5em;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+/* --- Status Messages --- */
+.loading {
+  font-size: 1.2em;
+  color: #535bf2;
+}
+.error {
+  font-size: 1.2em;
+  color: #ff6b6b;
+  background-color: #2e1a1a;
+  padding: 1em;
+  border-radius: 8px;
+}
